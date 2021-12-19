@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+ul {
+    margin: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+        text-transform: uppercase;
+        display: inline;
+        padding: 13px;
+        a {
+            text-align: center;
+            color: darkblue;
+            text-decoration: none;
+            &:hover,
+            &:active
+            {
+                color:#4ceafc;
+            }
+        }
+        }
+    }

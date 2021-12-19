@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Evaluate News with NLP</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://www.meaningcloud.com/wp-content/themes/textalytics/img_compressed/logo.png" alt="Logo">
+        </div>
+        <ul class="navigation">
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Contact Us</a>
+            </li>
+            </div>
+    </header>
+
+    <main>
+        <section>
+            <h1>Evaluate News with NLP</h1>
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <input id="url" type="text" name="input" value="" placeholder="Enter URL">
+                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
+                    onsubmit="return Client.handleSubmit(event)">
+            </form>
+        </section>
+
+        <section>
+            <div class="results">
+                <h2>Form Results:</h2>
+                <div id="results"></div>
+                <div id="polarity"></div>
+                <div id="agreement"></div>
+                <div id="subjectivity"></div>
+                <div id="confidence"></div>
+                <div id="irony"></div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Udacity Front End Web Development Nanodegree</p>
+        <p>Powered by <a href="https://www.meaningcloud.com/developer/sentiment-analysis/doc">Meaning Cloud Sentiment
+                Analysis</a></p>
+    </footer>
+
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+                    console.log('Service worker registration succeeded:', registration);
+                }, /*catch*/ function (error) {
+                    console.log('Service worker registration failed:', error);
+                });
+            })
+        } else {
+            console.log('Service workers are not supported.');
+        }
+
+
+    </script>
+
+</body>
+
+</html>

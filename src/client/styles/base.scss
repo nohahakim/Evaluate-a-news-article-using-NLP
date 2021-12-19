@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #92a8d1;
+}
+
+main {
+    flex: 2;
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+
+h1 {
+    font-family:verdana;
+    font-size: 2rem;
+    text-align: center;
+    color: darkblue;
+    padding: 1.3rem;
+
+}
+h2{
+    font-size: 1.25rem;
+    color: darkblue;
+
+}
+
+#results {
+    line-height: 20px;
+    letter-spacing: 1px;
+}
