@@ -37,18 +37,8 @@ async function handleSubmit(e) {
 
 
               })
-        .catch((error) => console.log("Error", error))
-
-
-              
-               
-              
-
-            
-
-           
-            
-    }
+        .catch((error) => console.log("Error", error))    
+}
 
 
 
