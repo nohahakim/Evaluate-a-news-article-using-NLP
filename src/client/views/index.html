@@ -31,27 +31,16 @@
             <h1>Evaluate News with NLP</h1>
             <form class="" onsubmit="return Client.handleSubmit(event)">
                 <input id="url" type="text" name="input" value="" placeholder="Enter URL">
-                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
+                <input id="btn" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
                     onsubmit="return Client.handleSubmit(event)">
             </form>
         </section>
 
-        <section>
-            <div class="results">
-                <h2>Form Results:</h2>
-                <div id="results"></div>
-                <div id="polarity"></div>
-                <div id="agreement"></div>
-                <div id="subjectivity"></div>
-                <div id="confidence"></div>
-                <div id="irony"></div>
-            </div>
-
-        </section>
+        <section class="results"> </section>
     </main>
 
     <footer>
-        <p>Udacity Front End Web Development Nanodegree</p>
+        <p>NLP project for Udacity Front End Web Development Nanodegree</p>
         <p>Powered by <a href="https://www.meaningcloud.com/developer/sentiment-analysis/doc">Meaning Cloud Sentiment
                 Analysis</a></p>
     </footer>
@@ -63,7 +52,7 @@
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
                     console.log('Service worker registration succeeded:', registration);
-                }, /*catch*/ function (error) {
+                }, function (error) {
                     console.log('Service worker registration failed:', error);
                 });
             })

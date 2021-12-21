@@ -1,6 +1,5 @@
 import { handleSubmit } from './js/formHandler'
 import { urlChecker } from './js/urlChecker'
-import { postData } from './js/postData'
 
 
 
@@ -13,7 +12,5 @@ import './styles/header.scss'
 import './styles/footer.scss'
 
 export {
-    handleSubmit,
-    urlChecker,
-    postData
+    handleSubmit, urlChecker
 }

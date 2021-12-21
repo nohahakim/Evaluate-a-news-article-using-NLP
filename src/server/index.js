@@ -3,7 +3,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require("cors")
 const mockAPIResponse = require('./mockAPI.js')
-const fetch = require('node-fetch')
+// const fetch = require('node-fetch')
+const axios = require("axios");
 
 
 const dotenv = require('dotenv');
@@ -46,16 +47,17 @@ app.get('/test', function (req, res) {
 app.post('/api', async (req, res) => {
     userInput = req.body.url;
     const mcURL = `${baseURL}${apiKey}&url=${userInput}&lang=en`
-    const response = await fetch(mcURL);
-    console.log('server response: ', response);
-    const mcResults = await response.json()
-    // console.log(mcResults)   
-    console.log('server side: ', mcResults);
-    try {
-        res.send(mcResults);
-    }
-    catch (error) {
-        console.log(`an error occured: ${error}`)
-    }
+
+    axios.post(mcURL).then((response) => {
+        const mcResults = response.data
+
+
+        try {
+            res.send(mcResults);
+        }
+        catch (error) {
+            console.log(`an error occured: ${error}`)
+        }
+    })
 })
 
