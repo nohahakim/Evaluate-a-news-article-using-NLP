@@ -18,6 +18,12 @@ A simple web tool that analyzes the sentiment of articles or blog posts using Na
 - **API:** MeaningCloud for sentiment analysis
 - **Testing:** Jest
 
+## Screenshots
+
+### Home Page
+
+![Home Page](screenshots/home.png)
+
 ## Installation
 
 ### Prerequisites
@@ -108,3 +114,5 @@ npm run test
 ```
 
 © 2025 NLP Article Evaluator
+
+---
